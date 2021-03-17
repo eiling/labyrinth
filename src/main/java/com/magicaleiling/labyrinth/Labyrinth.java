@@ -98,11 +98,9 @@ public class Labyrinth {
       if (!nextTile(tile + getIndexChange(move), move, depth + 1)) {
         tiles[tile].apply(move);
       }
-      if (moveCount - index >= 0) {
-        System.arraycopy(
-            possibleMoves, index + 1, possibleMoves, index, moveCount - index
-        );
-      }
+      System.arraycopy(
+          possibleMoves, index + 1, possibleMoves, index, moveCount - index
+      );
       /*  the madness above is equivalent to:
       for (int i = index; i < moveCount; i++) {
         possibleMoves[i] = possibleMoves[i + 1];
