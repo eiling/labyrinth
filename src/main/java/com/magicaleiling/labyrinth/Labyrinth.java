@@ -41,7 +41,7 @@ public class Labyrinth {
       }
     }
 
-    tileOrder = new int[tiles.length];
+    tileOrder = new int[width * height];
     tileOrderIndex = 0;
   }
 
