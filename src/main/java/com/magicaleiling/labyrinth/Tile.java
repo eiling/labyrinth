@@ -68,6 +68,14 @@ public class Tile {
 
   @Override
   public String toString() {
-    return Integer.toBinaryString(value);
+    return leftZeroPad(Integer.toBinaryString(value), 32);
+  }
+
+  private String leftZeroPad(String s, int len) {
+    int zerosNeeded = len - s.length();
+    if (zerosNeeded > 0) {
+      return "0".repeat(zerosNeeded) + s;
+    }
+    return s;
   }
 }

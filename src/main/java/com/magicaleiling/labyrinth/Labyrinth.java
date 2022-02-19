@@ -198,9 +198,9 @@ public class Labyrinth {
   public String toString() {
     var sb = new StringBuilder();
     for (int j = 0; j < height + 2; j++) {
-      sb.append(String.format("%32s", tiles[j * (height + 2)].toString()));
+      sb.append(tiles[j * (width + 2)].toString());
       for (int i = 1; i < width + 2; i++) {
-        sb.append(String.format(" %32s", tiles[i + j * (height + 2)].toString()));
+        sb.append(' ').append(tiles[i + j * (width + 2)].toString());
       }
       sb.append(System.lineSeparator());
     }
