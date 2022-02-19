@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class App {
   public static void main(String[] args) {
-    var labyrinth = new Labyrinth(40, 30, .8);
-    labyrinth.generate(false);
+    var labyrinth = new Labyrinth(20, 15, .7);
+    labyrinth.generate();
     System.out.println();
     System.out.println(labyrinth);
     System.out.println(labyrinth.html());

@@ -60,6 +60,10 @@ public class Labyrinth {
     return maxDepth;
   }
 
+  public void generate() {
+    generate(false);
+  }
+
   public void generate(boolean exits) {
     tiles[1 + width + 2].apply(LEFT);
     nextTile(1 + width + 2, RIGHT, 0);
